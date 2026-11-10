@@ -19,6 +19,7 @@
                 <button onclick="mulaiSebelum()">Pagi (Sebelum Belajar)</button>
                 <button onclick="mulaiSesudah()">Siang (Setelah Belajar)</button>
             </div>
+            <p class="admin-shortcut"><a href="admin.html">Halaman admin</a></p>
         </section>
 
         <section id="checkIn" class="hidden">
@@ -57,7 +58,7 @@
                 <button onclick="pilihMoodSebelum('Takut', this)">
                     <img src="images/takut.png" alt="Takut">
                     <span>Takut</span>
-                </button>    
+                </button>
             </div>
 
             <div id="alasanSebelum" class="hidden">
@@ -137,10 +138,23 @@
             <h2>Terima kasih sudah jujur dengan perasaanmu!</h2>
             <p>Jawabanmu sudah disampaikan kepada Ibu Guru.</p>
             <p>Kamu hebat hari ini, sampai jumpa hari esok</p>
+            <section id="vnPanel" class="vn-panel" aria-labelledby="vnTitle">
+                <h2 id="vnTitle">Mau bercerita lewat suara?</h2>
+                <p id="vnChildLabel">Rekam voice note singkat untuk Ibu Guru.</p>
+                <div class="vn-controls">
+                    <button type="button" id="vnRecord">🎙️ Mulai merekam</button>
+                    <button type="button" id="vnStop" disabled>Berhenti</button>
+                </div>
+                <p id="vnTimer" class="vn-timer">00:00 / 01:00</p>
+                <button type="button" id="vnSend" class="hidden" disabled>Kirim Voice Note</button>
+                <p id="vnStatus" class="vn-status" role="status" aria-live="polite"></p>
+            </section>
             <button onclick="location.reload()">Selesai & Kembali Ke Awal</button>
         </section>
     </div>
 
+    <script src="supabase-config.js"></script>
     <script src="DT script.js"></script>
+    <script src="voice-notes.js"></script>
 </body>
 </html>

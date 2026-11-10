@@ -154,3 +154,21 @@ button.hover {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.vn-login {
+    margin-top: 24px;
+    padding: 16px;
+    border: 2px solid #e0e7ff;
+    border-radius: 18px;
+    text-align: left;
+}
+.vn-login summary { color: #3730a3; font-weight: bold; cursor: pointer; }
+.vn-login p, .vn-panel p { font-size: 15px; }
+.vn-panel { margin: 24px 0; padding: 20px; border: 2px solid #e0e7ff; border-radius: 22px; background: #f8fafc; }
+.vn-controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.vn-timer { font-weight: bold; color: #3730a3; }
+.vn-status { min-height: 1.5em; color: #3730a3; font-size: 14px !important; }
+.vn-history { margin-top: 16px; text-align: left; }
+.vn-history-item { padding: 12px 0; border-top: 1px solid #e2e8f0; }
+.vn-history-item time { display: block; margin-bottom: 6px; color: #64748b; font-size: 13px; }
+.vn-history audio { width: 100%; margin: 10px 0; }
+.vn-panel button:disabled { opacity: .55; cursor: not-allowed; }

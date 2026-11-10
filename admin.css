@@ -1,0 +1,95 @@
+.admin-page {
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.admin-container {
+    max-width: 980px;
+    text-align: left;
+}
+.back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #4f46e5;
+    font-weight: 700;
+    text-decoration: none;
+}
+.admin-header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+.admin-eyebrow {
+    display: inline-block;
+    color: #6c63ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+.admin-header h1 { margin-top: 8px; }
+.admin-header p, .admin-login-panel p, .admin-notes-panel p { font-size: 15px; }
+.admin-login-panel {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 28px;
+    border: 2px solid #e0e7ff;
+    border-radius: 24px;
+    background: #f8fafc;
+}
+.admin-login-panel h2, .admin-notes-panel h2 { margin-top: 0; }
+.admin-login-panel label {
+    display: block;
+    margin-top: 10px;
+    color: #374151;
+    font-weight: 700;
+}
+.admin-login-panel button { width: 100%; margin-top: 8px; }
+.admin-status { min-height: 1.4em; color: #4b5563; font-size: 14px !important; }
+.admin-status.error { color: #b91c1c; }
+.admin-status.success { color: #047857; }
+.notes-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+.notes-toolbar h2 { margin-bottom: 4px; }
+.notes-count { margin: 0; color: #64748b; }
+.toolbar-actions { display: flex; gap: 8px; }
+.secondary-button { background: #e0e7ff; color: #3730a3; }
+.admin-notes-list { display: grid; gap: 14px; }
+.admin-note-card {
+    padding: 20px;
+    border: 2px solid #e0e7ff;
+    border-radius: 20px;
+    background: #fff;
+}
+.admin-note-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+.admin-note-actions { display: flex; justify-content: flex-end; }
+.delete-note-button { background: #fee2e2; color: #b91c1c; }
+.delete-note-button:hover { background: #fecaca; }
+.delete-note-button:disabled { opacity: .55; cursor: wait; }
+.admin-note-card h3 { margin: 0 0 5px; color: #312e81; }
+.admin-note-meta { margin: 0; color: #64748b; font-size: 13px !important; }
+.admin-note-card audio { display: block; width: 100%; margin-top: 14px; }
+.empty-notes {
+    padding: 30px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    color: #64748b;
+    text-align: center;
+}
+.admin-shortcut { margin-top: 22px; font-size: 13px !important; }
+.admin-shortcut a { color: #6b7280; }
+@media (max-width: 600px) {
+    .admin-page { padding: 16px 10px; }
+    .admin-container { padding: 24px 18px; }
+    .notes-toolbar, .admin-note-top { align-items: stretch; flex-direction: column; }
+    .toolbar-actions { width: 100%; }
+    .toolbar-actions button { flex: 1; }
+}

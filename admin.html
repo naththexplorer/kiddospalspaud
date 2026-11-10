@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Voice Note — KIDDOSPALS</title>
+    <link rel="stylesheet" href="Desain Berpikir styless.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+    <main class="container admin-container">
+        <a class="back-link" href="Desain%20Berpikir%20index%20html.html">← Kembali ke check-in anak</a>
+        <header class="admin-header">
+            <span class="admin-eyebrow">KIDDOSPALS · PENGELOLA</span>
+            <h1>Voice Note Anak</h1>
+            <p>Dengarkan cerita yang dikirim anak-anak.</p>
+        </header>
+
+        <section id="adminLoginPanel" class="admin-login-panel">
+            <h2>Masuk Admin</h2>
+            <form id="adminLoginForm">
+                <label for="adminEmail">Email</label>
+                <input id="adminEmail" type="email" placeholder="Email admin" autocomplete="username" required>
+                <label for="adminPassword">Kata sandi</label>
+                <input id="adminPassword" type="password" placeholder="Kata sandi admin" autocomplete="current-password" required>
+                <button type="submit" id="adminLoginButton">Masuk</button>
+            </form>
+            <p id="adminLoginStatus" class="admin-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="adminNotesPanel" class="admin-notes-panel hidden">
+            <div class="notes-toolbar">
+                <div>
+                    <h2>Rekaman masuk</h2>
+                    <p id="notesCount" class="notes-count"></p>
+                </div>
+                <div class="toolbar-actions">
+                    <button type="button" class="secondary-button" id="refreshNotes">Muat ulang</button>
+                    <button type="button" class="secondary-button" id="adminLogout">Keluar</button>
+                </div>
+            </div>
+            <p id="adminNotesStatus" class="admin-status" role="status" aria-live="polite"></p>
+            <div id="adminNotesList" class="admin-notes-list"></div>
+        </section>
+    </main>
+    <script src="supabase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
