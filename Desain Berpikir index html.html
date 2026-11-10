@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallo, Senang Bertemu Denganmu Lagi Hari Ini!</title>
+    <link rel="stylesheet" href="Desain Berpikir styless.css">
+</head>
+
+<body>
+    <div class="container">
+        <section id="halamanAwal">
+            <h1>Hallo, Senang Bertemu Denganmu Lagi Hari Ini!</h1>
+            <p>Siapa namamu?</p>
+            <input type="text" id="namaAnak" placeholder="Tulis namamu...">
+
+            <p>Mau check-in kapan?</p>
+            <div class="tombol-pilihan">
+                <button onclick="mulaiSebelum()">Pagi (Sebelum Belajar)</button>
+                <button onclick="mulaiSesudah()">Siang (Setelah Belajar)</button>
+            </div>
+        </section>
+
+        <section id="checkIn" class="hidden">
+            <h2>Sebelum Belajar</h2>
+            <p>Yuk pilih sesuai perasaanmu!</p>
+
+            <div class="mood-grid">
+                <button onclick="pilihMoodSebelum('Senang', this)">
+                    <img src="images/senang.png" alt="Senang">
+                    <span>Senang</span>
+                </button>
+                <button onclick="pilihMoodSebelum('Sedih', this)">
+                    <img src="images/sedih.png" alt="Sedih">
+                    <span>Sedih</span>
+                </button>
+                <button onclick="pilihMoodSebelum('Marah', this)">
+                    <img src="images/Marah.png" alt="Marah">
+                    <span>Marah</span>
+                </button>
+                <button onclick="pilihMoodSebelum('Kaget', this)">
+                    <img src="images/kaget.png" alt="Kaget">
+                    <span>Kaget</span>
+                </button>
+                <button onclick="pilihMoodSebelum('Bingung', this)">
+                    <img src="images/bingung.png" alt="Bingung">
+                    <span>Bingung</span>
+                </button>
+                <button onclick="pilihMoodSebelum('Malu', this)">
+                    <img src="images/malu.png" alt="Malu">
+                    <span>Malu</span>
+                </button>
+                <button onclick="pilihMoodSebelum('Kecewa', this)">
+                    <img src="images/kecewa.png" alt="Kecewa">
+                    <span>Kecewa</span>
+                </button>
+                <button onclick="pilihMoodSebelum('Takut', this)">
+                    <img src="images/takut.png" alt="Takut">
+                    <span>Takut</span>
+                </button>    
+            </div>
+
+            <div id="alasanSebelum" class="hidden">
+                <p>Apa yang membuatmu merasa seperti itu?</p>
+                <select id="masalahSebelum">
+                    <option value="">Pilih jawaban</option>
+                    <option value="Ada masalah dengan teman">Ada masalah dengan teman</option>
+                    <option value="Tidak enak badan">Aku merasa tidak enak badan</option>
+                    <option value="Mau BAB">Aku mau BAB</option>
+                    <option value="Masih ngantuk">Aku masih ngantuk</option>
+                    <option value="Mau sama mamah">Aku mau sama mamah</option>
+                    <option value="Tidak ada masalah">Tidak ada masalah</option>
+                </select>
+
+                <button onclick="simpanSebelum()">Simpan & Selesai</button>
+            </div>
+        </section>
+
+        <section id="checkOut" class="hidden">
+            <h2>Setelah Belajar</h2>
+            <p>Sekarang, bagaimana perasaanmu?</p>
+
+            <div class="mood-grid">
+                <button onclick="pilihMoodSesudah('Senang', this)">
+                    <img src="images/senang.png" alt="Senang">
+                    <span>Senang</span>
+                </button>
+                <button onclick="pilihMoodSesudah('Sedih', this)">
+                    <img src="images/sedih.png" alt="Sedih">
+                    <span>Sedih</span>
+                </button>
+                <button onclick="pilihMoodSesudah('Marah', this)">
+                    <img src="images/marah.png" alt="Marah">
+                    <span>Marah</span>
+                </button>
+                <button onclick="pilihMoodSesudah('Kaget', this)">
+                    <img src="images/kaget.png" alt="Kaget">
+                    <span>Kaget</span>
+                </button>
+                <button onclick="pilihMoodSesudah('Takut', this)">
+                    <img src="images/takut.png" alt="Takut">
+                    <span>Takut</span>
+                </button>
+                <button onclick="pilihMoodSesudah('Malu', this)">
+                    <img src="images/malu.png" alt="Malu">
+                    <span>Malu</span>
+                </button>
+                <button onclick="pilihMoodSesudah('Kecewa', this)">
+                    <img src="images/kecewa.png" alt="Kecewa">
+                    <span>Kecewa</span>
+                </button>
+                <button onclick="pilihMoodSesudah('Bingung', this)">
+                    <img src="images/bingung.png" alt="Bingung">
+                    <span>Bingung</span>
+                </button>
+            </div>
+
+            <div id="alasanSesudah" class="hidden">
+                <p>Bagaimana sekolahmu hari ini?</p>
+                <select id="masalahSesudah">
+                    <option value="">Pilih jawaban</option>
+                    <option value="Senang belajar">Aku senang belajar hari ini</option>
+                    <option value="Senang bermain">Aku senang bermain dengan teman</option>
+                    <option value="Tidak suka belajar">Aku tidak suka belajar</option>
+                    <option value="Ingin dekat guru">Aku ingin lebih dekat dengan ibu guru</option>
+                    <option value="Tidak ada masalah">Tidak ada masalah</option>
+                </select>
+
+                <button onclick="simpanSesudah()">Simpan & Selesai</button>
+            </div>
+        </section>
+
+        <section id="selesai" class="hidden">
+            <div class="logo">
+                <img src="images/terimakasih.png" alt="Selesai" style="width: 80px;">
+            </div>
+            <h2>Terima kasih sudah jujur dengan perasaanmu!</h2>
+            <p>Jawabanmu sudah disampaikan kepada Ibu Guru.</p>
+            <p>Kamu hebat hari ini, sampai jumpa hari esok</p>
+            <button onclick="location.reload()">Selesai & Kembali Ke Awal</button>
+        </section>
+    </div>
+
+    <script src="DT script.js"></script>
+</body>
+</html>
